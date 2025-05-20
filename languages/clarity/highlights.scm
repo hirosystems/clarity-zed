@@ -65,11 +65,13 @@
 ] @keyword.operator
 
 ; Functions
-(function_signature (identifier) @function)
-(function_signature_for_trait (identifier) @function)
-(basic_native_form operator: (native_identifier) @function)
+; Use different captures for function definitions, function calls, and built-in functions
+(function_signature (identifier) @constructor)
+(function_signature_for_trait (identifier) @constructor)
+
 (contract_function_call operator: (identifier) @function)
 
+(basic_native_form operator: (native_identifier) @label)
 [
   "let"
   "impl-trait"
@@ -83,11 +85,8 @@
   "define-non-fungible-token"
   "define-constant"
   "define-map"
-] @function
+] @label
 
-; Variables and properties
+; Variables
+(function_parameter) @variable
 (global) @variable.special
-
-(tuple_lit key: (identifier) @property)
-(tuple_type key: (identifier) @property)
-(tuple_type_for_trait key: (identifier) @property)
