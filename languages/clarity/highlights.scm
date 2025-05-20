@@ -45,6 +45,7 @@
   "some"
   "ok"
   "err"
+  (none_lit)
   (list_lit_token)
 ] @keyword
 
@@ -65,15 +66,18 @@
 ] @keyword.operator
 
 ; Functions
-; Use different captures for function definitions, function calls, and built-in functions
-(function_signature (identifier) @constructor)
-(function_signature_for_trait (identifier) @constructor)
-
+; Use different captures for user-defined functions and built-in functions
+(function_signature (identifier) @function)
+(function_signature_for_trait (identifier) @function)
 (contract_function_call operator: (identifier) @function)
 
 (basic_native_form operator: (native_identifier) @label)
 [
   "let"
+] @label
+
+; Top-level declarations
+[
   "impl-trait"
   "use-trait"
   "define-trait"
@@ -85,7 +89,7 @@
   "define-non-fungible-token"
   "define-constant"
   "define-map"
-] @label
+] @preproc
 
 ; Variables
 (function_parameter) @variable
