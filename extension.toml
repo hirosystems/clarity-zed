@@ -1,0 +1,15 @@
+id = "clarity-lsp"
+name = "Clarity"
+version = "0.0.1"
+schema_version = 1
+authors = ["Hugo Caillard <hugo@hiro.so>"]
+description = "Clarity language support"
+repository = "https://github.com/hirosystems/clarinet"
+
+[language_servers.clarity-lsp]
+name = "Clarity Language Server"
+language = "Clarity"
+
+[grammars.clarity]
+repository = "https://github.com/xlittlerag/tree-sitter-clarity"
+commit = "976f20035b8027518bc962a1554737acba4afda3"
