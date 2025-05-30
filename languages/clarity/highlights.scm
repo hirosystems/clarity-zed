@@ -41,10 +41,12 @@
 ] @type
 
 ; Keywords
-[
-  "some"
+(some_lit ("some") @keyword)
+(response_lit [
   "ok"
   "err"
+] @keyword)
+[
   (none_lit)
   (list_lit_token)
 ] @keyword
