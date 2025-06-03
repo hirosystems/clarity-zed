@@ -1,4 +1,4 @@
-id = "clarity-lsp"
+id = "clarity"
 name = "Clarity"
 version = "0.0.1"
 schema_version = 1
