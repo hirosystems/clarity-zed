@@ -2,7 +2,7 @@ id = "clarity"
 name = "Clarity"
 version = "0.0.1"
 schema_version = 1
-authors = ["Hugo Caillard <hugo@hiro.so>"]
+authors = ["Hugo <hugo@hiro.so>"]
 description = "Clarity language support"
 repository = "https://github.com/hirosystems/clarity-zed"
 
